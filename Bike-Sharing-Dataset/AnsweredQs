@@ -1,0 +1,20 @@
+* "how did you pick the question(s) that you did?"
+    - 
+* "why are these questions important from a business perspective?"
+    - They can inform how many bikes need to be distributed throughout the services to compensate for predicted demand.
+    - Prediction of potential profits from amount of bikes being used during a particular day or weather condition.
+    - 
+* "how did you decide on the data cleaning options you performed?"
+    - Necessary dummy variables for seasons and weather because they were categorical. They couldn't provide appropriate p-vals.
+    - Seasons were reassigned from the dated months instead of the season category because they were miscategorized.
+    - One outlier was eliminated because of the drastic reduction in bike numbers for that day due to Hurricane Sandy.
+* "why did you choose a given method or library?"
+    - Scikit learn was used to develop the regression model for most of the visualizations.
+    - Pandas was used to view the data in a readable format.
+    
+* "why did you select those visualizations and what did you learn from each of them?"
+* "why did you pick those features as predictors?"
+* "how would you interpret the results?"
+* "how confident are you in the predictive quality of the results?"
+    - Based on the P-value of this feature, we can at least be 95% confident of the quality of the prediction.
+* "what are some of the things that could cause the results to be wrong?"
