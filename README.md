@@ -36,7 +36,7 @@ Pulled data from UCI's Machine Learning Repository. This dataset is on the Capit
 #### 1. Set up Dataframe
 The UCI dataset provided a csv file with daily information on weather status, date, and bikes rented. With weather status and season, dummy vairables were created because of their categorical nature in order to make the data usable for a model. Season was determined to be inaccurate, so seasons were assigned based on the month to be more accurate to reality. There was one outlier in the dataset where only 22 bikes were rented on that day (this was due to Hurricane Sandy). The outlier was removed. The final dataframe was exported to a JSON file for later use.
 
-Notebook to see dataframe set up process: (df etup link)
+Notebook to see dataframe set up process: [DataFrame Setup Notebook](https://github.com/marcosan93/Bike_predictor/blob/master/DF_Setup.ipynb)
 
 #### 2. EDA (Exploratory Data Analysis)
 (input plot of original data w/ regression line)
@@ -45,14 +45,14 @@ This data is inherently a time-series dataset with seasonality, which displayed 
 
 (input resids plot)
 
-Notebook to see EDA process: (link)
+Notebook to see EDA process: [EDA Notebook](https://github.com/marcosan93/Bike_predictor/blob/master/Graphing%20and%20Plotting.ipynb)
 
 #### 3. Model creation and testing
 Looking through our data, with so many categorical variables, we decided to first create interaction variables between all features and see which ones were statistically significant at a 95% confidence interval. To do so, we used Statsmodels's OLS method to create our first model with all these variables and checked each one's p-value. We cut out every variable that had a p-value of 0.9 or higher, and then ran the model again using the remaining variables. We repeated this process until there were no variables with p-values above the 0.9 threshold. From there, we lowered the cut-off threshold to 0.8 and reran the model. We did this process multiple times over, until the threshold was 0.05, and all the remaining variables were statistically significant.
 
 This entire process cut down our dependent and interaction variable count from over 240 down to 41 variables.
 
-Notebook to see model creation process: (link model notebook)
+Notebook to see model creation process: [Model Creation and Testing](https://github.com/marcosan93/Bike_predictor/blob/master/Model_creation.ipynb)
 
 
 ## Final Model
