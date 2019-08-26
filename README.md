@@ -39,11 +39,11 @@ The UCI dataset provided a csv file with daily information on weather status, da
 Notebook to see dataframe set up process: [DataFrame Setup Notebook](https://github.com/marcosan93/Bike_predictor/blob/master/DF_Setup.ipynb)
 
 #### 2. EDA (Exploratory Data Analysis)
-(input plot of original data w/ regression line)
+![alt text](https://github.com/marcosan93/Bike_predictor/blob/master/Visualizations/scatter_bike_regression.png)
 
 This data is inherently a time-series dataset with seasonality, which displayed an upward trend with time. To account for this upward trend, we normalized the data by using ScikitLearn to plot a simple linear regression line and worked with the residuals between the line and the actual bike count (residuals = actual bike count - regression line predictions). These residuals became our new dependent variable.
 
-(input resids plot)
+![alt text](https://github.com/marcosan93/Bike_predictor/blob/master/Visualizations/scatter_bike_trend.png)
 
 Notebook to see EDA process: [EDA Notebook](https://github.com/marcosan93/Bike_predictor/blob/master/Graphing%20and%20Plotting.ipynb)
 
@@ -58,4 +58,4 @@ Notebook to see model creation process: [Model Creation and Testing](https://git
 ## Final Model
 Our final model predicts the residuals of the original simple linear regression line. We added the predicted residuals of our final model to the linear regression's predictions of bike count to see how well our model predicts bike count. Below is a side-by-side comparison of our model predictions and actual bike count.
 
-(input model visuals)
+![alt text](https://github.com/marcosan93/Bike_predictor/blob/master/Visualizations/model_vs_actual.png)
